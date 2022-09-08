@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import App from "./app";
 import { BrowserRouter } from "react-router-dom";
 import { createRoot } from 'react-dom/client';
+import { Provider } from "react-redux";
+import {store} from "../src/store/context"
 import './styles/all'
 
 const container = document.getElementById('root');
@@ -10,11 +12,13 @@ const root = createRoot(container);
 function Init() {
    
     return (
-                    <React.StrictMode>
+                <React.StrictMode>
+                    <Provider store = {store}>
                             <BrowserRouter>
                                     <App/>
                              </BrowserRouter>
-                    </React.StrictMode>
+                    </Provider>
+                </React.StrictMode>
     )
 }
 

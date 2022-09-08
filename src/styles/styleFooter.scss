@@ -1,7 +1,21 @@
 .footer {
     height: 70px;
     background: rgb(131, 128, 128);
-    .basket{
-        width: 100%;
+    .footer-block{
+        display: flex;
+        padding: 25px;
+        justify-content: flex-end;
+        :nth-child(n) {
+            margin-left: 15px;
+            color: rgb(241, 229, 229);
+            font-weight: bold;
+            &:hover {
+                color: rgb(249, 77, 14);
+                transition: 0.5s;
+            }
+        }
+        :last-child :hover {
+            color: rgb(241, 229, 229);
+        }
     }
 }

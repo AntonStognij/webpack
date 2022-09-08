@@ -7,6 +7,7 @@ const Main = () => {
     return (
         <main className="wrap main">
              <h1>Евробаскет-2022. Хорватия – Украина, Чехия сыграет с Израилем и другие матчи</h1>
+            <div className="block-main">
             <h3>Групповой этап</h3>
             <div className="block-gorup">
                 <div className="gorup">
@@ -72,22 +73,10 @@ const Main = () => {
                 <p>Литва – 2-3</p>
                 <p>Босния и Герцеговина – 2-3</p>
                 <p>Венгрия – 0-5</p>
-                </div>
-               
-                
-                
-                
-               
-                
-               
-                
-                
-                
-               
-                
-                
-                
+                </div>    
             </div>
+            </div>
+           
             
         </main>
         

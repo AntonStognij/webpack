@@ -17,6 +17,7 @@
     list-style: none;
     text-decoration: none;
     box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
 }
 .wrap {
     width: 1100px;
@@ -49,20 +50,28 @@
         }
        }
      
+     
     }
     .route {
         display: flex;
         :nth-child(n) {
             margin-right: 15px;
-            color: rgb(241, 229, 229);
+           
+        }   
+        li:hover:a{
+            font-weight: bolder;
         }
+        .link-active {
+            color: rgb(249, 77, 14);
+        }
+        .link {
+            color: rgb(241, 229, 229);
+            &:hover {
+                color: rgb(249, 77, 14);
+                transition: 0.5s;
+            }
+        }
+       
     }
 }
 
-// a {
-//     &:hover{
-//         color:  #4db1cb;
-//         font-weight: bold;
-//         transition: 0.5s;
-//     }
-// }

@@ -12,7 +12,7 @@ import Error from "components/ErrorPage";
 
 
 const App = () => {
-    
+    console.log("ap")
     return (
         <>
         <Header/>

@@ -1,9 +1,14 @@
-import React from "react";
+import { createStore } from "redux"
+const defaultState = {
+    name:""
+}
 
-const ContextGoods = React.createContext()
-const ContextPurchase = React.createContext()
-const ContextСhoice = React.createContext()
-const ContextProduct = React.createContext()
-
-
-export { ContextGoods , ContextPurchase, ContextСhoice, ContextProduct}
+const reducer = (state = defaultState, action)=> {
+    switch (action.type) {
+        case "ADD_NAME" : 
+        return {...state, name:action.payload}
+        default: return state
+    }
+}
+const store = createStore(reducer)
+export {store}
