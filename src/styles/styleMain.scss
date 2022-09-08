@@ -1,13 +1,29 @@
-.slider{
-    width: 100%;
-}
-.catalog {
+.block-gorup {
     display: flex;
-    margin-bottom: 55px;
+    flex-wrap: wrap;
+   
+.gorup {
+    border: 1px solid #90a2c3;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px;
+    background: rgb(191, 200, 236);
+    width: 45%;
+    .play {
+        border-bottom: 1px solid rgb(191, 200, 236);
+        padding: 5px;
+        margin-bottom: 5px;
+    }
+    p{
+        font-size: 18px;
+    }
+    h4{
+        font-size: 24px;
+        text-align: center;
+        color: rgb(107, 81, 72);
+    }
+    h5 {
+        font-size: 22px;
+    }
 }
-
-.h2 {
-    color: #6d6c68;
-    font-weight: bold;
-    margin-top: 25px;
 }
