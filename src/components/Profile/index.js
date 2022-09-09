@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import avatar from "assets/avatar.png"
 import img3 from "assets/img3.jpg"
 const Profile = () => {
-console,console.log("test");
     //смотрим есть ли запись 
     const isLocal = JSON.parse(localStorage.getItem('Admin'))
     return isLocal ? (

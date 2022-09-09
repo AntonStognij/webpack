@@ -1,8 +1,4 @@
 
-// import photo from "assets/slider.png"
-// import block from "assets/block.png"
-
-
 const Main = () => {
     return (
         <main className="wrap main">
@@ -75,11 +71,8 @@ const Main = () => {
                 <p>Венгрия – 0-5</p>
                 </div>    
             </div>
-            </div>
-           
-            
-        </main>
-        
+            </div> 
+        </main> 
     )
 }
 

@@ -1,5 +1,3 @@
-// import footer from "assets/footer.png"
-import basket from "assets/basket.png"
 const Footer = () => {
     return (
    <footer className="footer ">

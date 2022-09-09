@@ -7,7 +7,6 @@ const Authorization = () => {
     function checkValie (valueOne, valueTwo){
         return (valueOne == "Admin"&& valueTwo =="12345") 
     }
-    
     const check = checkValie (login.value, password.value)
   
 if (check){
@@ -18,8 +17,6 @@ if (check){
     login.value = "";
     password.value = ""
     window.location.pathname = "/"
-    console.log(check)
-    console.log( window.location.pathname)
     }   
 }
 
