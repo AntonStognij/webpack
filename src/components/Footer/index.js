@@ -3,7 +3,7 @@ import footer from "assets/footer.png"
 const Footer = () => {
     return (
      <footer className="block-footer">
-        <img className = "footer"  src= {footer} alt="footer"/>
+        <h3>test footer</h3>
      </footer>
             
     
