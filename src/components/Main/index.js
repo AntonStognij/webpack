@@ -6,7 +6,7 @@
 const Main = () => {
     return (
         <main id="main">
-          <h2>testvain</h2>
+          {/* <h2>testvain</h2> */}
             
         </main>
         
