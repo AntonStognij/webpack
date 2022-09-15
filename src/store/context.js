@@ -1,9 +1,9 @@
 import React from "react";
 
-const ContextGoods = React.createContext()
-const ContextPurchase = React.createContext()
-const ContextСhoice = React.createContext()
-const ContextProduct = React.createContext()
+const ContextLatitude = React.createContext()
+const ContextLongitude = React.createContext()
+const ContextWether = React.createContext()
 
 
-export { ContextGoods , ContextPurchase, ContextСhoice, ContextProduct}
+
+export { ContextLatitude , ContextLongitude, ContextWether}

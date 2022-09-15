@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import App from "./app";
+import { ContextLatitude , ContextLongitude , ContextWether} from "store/context";
 import { BrowserRouter } from "react-router-dom";
 import { createRoot } from 'react-dom/client';
 import './styles/all'
@@ -8,13 +9,21 @@ const container = document.getElementById('root');
 const root = createRoot(container);
 
 function Init() {
-   
+    const [latitude, setLatitude] = useState("")
+    const [longitude, setLongitude] = useState("")
+    const [nowWeatherForElem, setWeatherNow] = useState("")
     return (
-                    // <React.StrictMode>
-                            <BrowserRouter>
+                // <React.StrictMode>
+                    <BrowserRouter>
+                        <ContextLongitude.Provider value={{longitude, setLongitude}}>  
+                            <ContextLatitude.Provider value={{latitude, setLatitude}}>
+                                    <ContextWether.Provider value={{nowWeatherForElem, setWeatherNow}}>
                                     <App/>
-                             </BrowserRouter>
-                    // {/* </React.StrictMode> */}
+                                    </ContextWether.Provider>
+                            </ContextLatitude.Provider>
+                        </ContextLongitude.Provider>
+                    </BrowserRouter>
+                /* </React.StrictMode> */
     )
 }
 
