@@ -1,20 +1,43 @@
+import cloudTwo from "assets/cloudTwo.png"
+import cloudRain from "assets/cloud-rain.png"
+import cloudRainTwo from "assets/cloud-rain-two.png"
+import water from "assets/water.png"
 
- import React, {useContext} from "react";
- import {  ContextPurchase, ContextСhoice} from "store/context";
 
 
-const serchElem = (arr, id) => {
-    for (let i=0; i < arr.length; i++ ){
-        if (arr[i].id == id){
-            return arr[i]
-        }
+
+const getBg = (paramWeather) => {
+    if (paramWeather == "Rain") {
+      return "weather rain"
     }
-    return null
+    if (paramWeather == "Clouds") {
+      return "weather cold"
+    }
+    else {
+      return "weather hot"
+    }
+
+  }
+
+  const getImg = (paramWeather) =>{
+    if (paramWeather == "Rain") {
+        return { imgOne: cloudRain,
+                imgTwo:cloudRainTwo,
+                imgThree:water
 }
+    } 
+    if (paramWeather == "Clouds"){
+        return {
+            imgOne: cloudTwo,
+            imgTwo:null,
+            imgThree:null
+        } 
+    }
+    return {
+        imgOne: cloudTwo,
+        imgTwo:null,
+        imgThree:null
+    } 
+  }
 
-const clear = (arr, i) => {
-    return arr.splice(i, arr.length )
-}
-
-
-export {serchElem, clear}
+export {getBg, getImg}

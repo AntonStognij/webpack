@@ -2,6 +2,8 @@ import React, {useEffect, useState} from "react";
 
 import cloudTwo from "assets/cloudTwo.png"
 import moment from "moment/moment";
+import {getBg} from "../../helpers"
+import Elemet from "../Ellem"
 
 const Main = () => {
   const [nowWeather, setWeather] = useState({})
@@ -36,27 +38,10 @@ const Main = () => {
     let temp = Math.round(main?.temp - 273)
     //определяем время
     let time = moment.unix(dt).format('MMMM Do YYYY, hh:mm')
-    //определяем фон
-    function getBg (paramWeather) {
-      if (paramWeather == "Rain") {
-        return "weather rain"
-      }
-      if (paramWeather == "Clouds") {
-        return "weather cold"
-      }
-      else {
-        return "weather hot"
-      }
-
-    }
-    //функция создает 
-   
+    
     return dt ?(
         <div id="main" className={getBg(weather?.[0]?.main)}>
-          
-          <img className = "cloudTwo" src= {cloudTwo} alt="cloudTwo"/>
-          <img className = "cloudTwo big-cloudTwo" src= {cloudTwo} alt="cloudTwo"/>
-       
+          {Elemet(weather?.[0]?.main)}      
           <div className="blockWether">
             <div className="block-city">
               <div>
@@ -78,7 +63,7 @@ const Main = () => {
         
     ) : (<div id="main" className={getBg(weather?.[0]?.main)}>
     <div className="blockWether">
-     <h2>Srry, no information...</h2>
+     <h2>Sorry, no information...</h2>
     </div>
     
       
