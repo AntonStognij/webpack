@@ -1,4 +1,3 @@
-import footer from "assets/footer.png"
 
 const Footer = () => {
     return (

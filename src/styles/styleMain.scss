@@ -1,0 +1,69 @@
+@font-face {
+    font-family: 'Inter';
+    src: url("../../src/fonts/Inter-Regular.ttf");
+}
+.weather {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../../src/assets/sapiens_rain.png");
+    background-size: auto 100%;
+    background-position: 85% 70px ;
+    background-repeat :no-repeat;
+    overflow: hidden;
+    font-family: "Inter", "sans-serif ";
+    font-weight: 400;
+   
+}
+
+.rain {
+    background-image: url("../../src/assets/sapiens_rain.png");
+}
+.hot {
+    background-image: url("../../src/assets/sapiens_rain.png");
+}
+.cold {
+    background-image: url("../../src/assets/sapiens_cold.png");
+}
+
+.blockWether {
+    border-radius: 15px;
+    width: 35%;
+    margin-top: 45px;
+    margin-left: 35px;
+    background: rgba(195, 193, 240, 0.5);
+    padding: 25px;
+    box-shadow: 0px 20px 52px -8px rgba(0, 0, 0, 0.15);
+}
+
+.temp {
+    font-size: 42px;
+    text-align: right;
+    position: relative;
+    &:before {
+        content: "";
+        display: block;
+        width: 7px;
+        height: 7px;
+        border: 1px solid rgb(0, 0, 0);
+        border-radius: 50%;
+        position: absolute;
+        left: 50px;
+    }
+}
+
+.block-city{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    .city{
+        font-size: 50px;
+       
+    }
+}
+
+.city {
+    margin-bottom: 0;
+}
+.time{
+    margin-top: 5px;
+}
