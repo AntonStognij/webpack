@@ -10,11 +10,11 @@ const root = createRoot(container);
 function Init() {
    
     return (
-                    <React.StrictMode>
+                    // <React.StrictMode>
                             <BrowserRouter>
                                     <App/>
                              </BrowserRouter>
-                    </React.StrictMode>
+                    // {/* </React.StrictMode> */}
     )
 }
 
