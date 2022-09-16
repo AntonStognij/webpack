@@ -1,7 +1,11 @@
 import cloudTwo from "assets/cloudTwo.png"
 import cloudRain from "assets/cloud-rain.png"
 import cloudRainTwo from "assets/cloud-rain-two.png"
+import rain from "assets/rain.png"
 import water from "assets/water.png"
+import sun from "assets/sun.png"
+import sunCloud from "assets/sun-cloud.png"
+import snow from "assets/snow.png"
 import moment from "moment/moment";
 
 
@@ -52,6 +56,43 @@ const getBg = (paramWeather) => {
         imgThree:null
     } 
   }
+
+  const newArr = (arr)=> {
+     console.log ("test arr", arr)
+    let objArr = {}
+    let subArr = []
+    for(let i =0; i < arr.length; i++){
+     let key = Object.keys(objArr)
+    
+     let time = moment.unix(arr[i].dt-10800).format('GGGG-MM-DD')
+     if (key.includes(time)){
+       subArr.push(arr[i])
+       objArr[time] = subArr
+     } else {
+       subArr = []
+       subArr.push(arr[i])
+       objArr[time] = subArr
+     }
+    }
+    subArr = []
+    for (var key in objArr) {
+     subArr.push(objArr[key])
+   }
+   return subArr
+  }
+
+  const getImgWether = (param) => {
+    if (param == "Clouds") {
+      return sunCloud
+    }
+    if (param == "Rain") {
+      return rain
+    }
+    if (param == "Clear") {
+      return sun
+    } 
+    return snow
+  }
  
 
-export {getBg, getImg}
+export {getBg, getImg, newArr, getImgWether}
