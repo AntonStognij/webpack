@@ -6,13 +6,15 @@ import water from "assets/water.png"
 import sun from "assets/sun.png"
 import sunCloud from "assets/sun-cloud.png"
 import snow from "assets/snow.png"
+import star from "assets/star.png"
 import moment from "moment/moment";
+
+
 
 
 //функция определяет фон
 const getBg = (paramWeather) => {
   let time = moment().format('HH')
-  console.log(time)
     if (paramWeather == "Rain" && (time > 19 || time >0 && time < 7)) {
       return "weather rain night"
     }
@@ -58,7 +60,6 @@ const getBg = (paramWeather) => {
   }
 
   const newArr = (arr)=> {
-     console.log ("test arr", arr)
     let objArr = {}
     let subArr = []
     for(let i =0; i < arr.length; i++){
@@ -90,6 +91,9 @@ const getBg = (paramWeather) => {
     }
     if (param == "Clear") {
       return sun
+    } 
+    if (param == "Star") {
+      return star
     } 
     return snow
   }

@@ -30,6 +30,15 @@
 
 .night {
     background-color: rgb(12, 14, 26);
+    color: #f7a301;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    .btn {
+        text-shadow:none;
+        color: rgb(255, 255, 255);
+    }
+    .all-block{
+        background-color: rgba(255, 255, 255, 0.245);
+    }
 }
 
 .blockWether {

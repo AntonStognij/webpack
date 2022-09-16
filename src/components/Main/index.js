@@ -16,7 +16,6 @@ const Main = () => {
     setLatitude(latitude)
     let longitude = +position.coords.longitude.toFixed(2)
     setLongitude(longitude)
-    console.log(latitude, longitude)
     fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=283b08861d9cdaad8cba21d4d18c1d9a&lang=ua`).then(res => res.json())
     .then(res => setWeatherNow(res))
    
