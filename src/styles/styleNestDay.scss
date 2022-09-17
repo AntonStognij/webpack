@@ -1,26 +1,31 @@
 .block-next-day {
     display: flex;
     margin-top: 25px;
-    justify-content: space-between;
+    justify-content: space-evenly;
     .blockWether {
         margin: 0;
-        width: 15%;
+        width: 120px;
         padding: 5px;
         display: flex;
         align-items: center;
         flex-direction: column;
+        margin: 10px;
     }
 }
 
 .all-block {
     font-size: 12px;
     z-index: 10;
-    margin: 45px;
-    margin-top: 100px;
+    margin-top: 45px;
+    margin-left: 35px;
     background-color: rgba(0, 0, 0, 0.15);
     padding: 20px;
     border-radius: 15px;
-  
+    display: inline-block;
+    .cloudTwo{
+        animation: none;
+        left: 70%;
+    }
 }
 .btn {
     text-align: right;
@@ -39,6 +44,7 @@
 .block-filter{
     display: flex;
     justify-content: center;
+    margin-top: 20px;
 }
 
 .img-wether{

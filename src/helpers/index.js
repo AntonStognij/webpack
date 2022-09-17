@@ -15,20 +15,20 @@ import moment from "moment/moment";
 //функция определяет фон
 const getBg = (paramWeather) => {
   let time = moment().format('HH')
-    if (paramWeather == "Rain" && (time > 19 || time >0 && time < 7)) {
+    if (paramWeather == "Rain" && (time > 19 || time >=0 && time < 7)) {
       return "weather rain night"
     }
-    if (paramWeather == "Rain" && (time > 19 || time >0 && time < 7)) {
+    if (paramWeather == "Rain" && (time > 19 || time >=0 && time < 7)) {
       return "weather rain"
     }
-    if (paramWeather == "Clouds" && (time > 19 || time >0 && time < 7)) {
+    if (paramWeather == "Clouds" && (time > 19 || time >=0 && time < 7)) {
       return "weather cold night"
     }
-    if (paramWeather == "Clouds" && (time > 19 || time >0 && time < 7)) {
+    if (paramWeather == "Clouds" && (time > 19 || time >=0 && time < 7)) {
       return "weather cold"
     }
     else {
-      if(time > 19 || time >0 && time < 7){
+      if(time > 19 || time >=0 && time < 7){
         return "weather hot night"
       } else {
         return "weather hot"

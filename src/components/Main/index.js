@@ -1,4 +1,4 @@
-import React, {useEffect, useState, useContext} from "react";
+import React, {useEffect, useContext} from "react";
 import { Link } from "react-router-dom";
 import { ContextLatitude , ContextLongitude , ContextWether} from "store/context";
 import moment from "moment/moment";
@@ -48,7 +48,6 @@ const Main = () => {
                 <h2 className="city">{name}</h2>
                 <p className="time">{time}</p>
               </div>
-              
               <h2 ><span className="temp"> {temp} С </span></h2>
             </div>
             <h2>Atmospheric pressure: <span className="pressureNm"> {main?.pressure} hPa</span> </h2>
@@ -58,9 +57,7 @@ const Main = () => {
             <h2>Wind speed: <span className="speed"> {wind?.speed } meter/sec</span> </h2>
             <Link className="btn" to="/next">Next days</Link> 
           </div>
-        
-        </div>
-        
+        </div> 
     ) : (<div id="main" className={getBg(weather?.[0]?.main)}>
     <div className="blockWether">
      <h2>Sorry, no information...</h2>
