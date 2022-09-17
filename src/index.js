@@ -12,9 +12,8 @@ function Init() {
     const [latitude, setLatitude] = useState("")
     const [longitude, setLongitude] = useState("")
     const [nowWeatherForElem, setWeatherNow] = useState("")
-    const [arrWether, setArrWether] = useState([])
     return (
-                // <React.StrictMode>
+                <React.StrictMode>
                     <BrowserRouter>
                         <ContextLongitude.Provider value={{longitude, setLongitude}}>  
                             <ContextLatitude.Provider value={{latitude, setLatitude}}>
@@ -24,7 +23,7 @@ function Init() {
                             </ContextLatitude.Provider>
                         </ContextLongitude.Provider>
                     </BrowserRouter>
-                /* </React.StrictMode> */
+                </React.StrictMode> 
     )
 }
 
