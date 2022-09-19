@@ -57,7 +57,7 @@ module.exports = {
         new webpack.HotModuleReplacementPlugin(),
         new HtmlWebpackPlugin({
             title: "Webpack App",
-            template: "./src/index.html",
+            template: "./src/template/index.html",
         }),
         new MiniCssExtractPlugin({
             filename: production ? '[name].[contenthash].css' : '[name].css',
